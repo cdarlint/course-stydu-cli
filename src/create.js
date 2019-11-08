@@ -101,9 +101,9 @@ module.exports = async (courseTitle) => {
                     if (!err) {
                         spinner.succeed();
                         console.log('  ' + chalk.green("🚀 init finish!"));
-                        console.log(chalk.green(`   cd ${courseTitle}`));
+                        console.log(chalk.green(`   cd ${courseTitle} && code ./index.m3u8`));
                         console.log(chalk.green(`   please write index.m3u8`));
-                        console.log(chalk.green(`   course-cli create`));
+                        console.log(chalk.green(`   course-cli begin`));
                         resolve();
                     } else {
                         spinner.fail();
