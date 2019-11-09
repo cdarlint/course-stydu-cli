@@ -18,10 +18,10 @@ let downFile = () => {
     if (count === videoUrlList.length) {
         console.log("🚀 all ts down finish!");
         console.log("📦 total: " + count);
-        console.log(chalk.green(`cd m3u8 && ffmpeg -allowed_extensions ALL -protocol_whitelist "tls,file,https,http,crypto,tcp" -i "index.m3u8" -c copy ../${courseTitle}.mp4`));
+        console.log(chalk.green(`cd m3u8 && ffmpeg -allowed_extensions ALL -protocol_whitelist "tls,file,https,http,crypto,tcp" -i "index.m3u8" -c copy ../${courseTitle}.mp4 && cd .. && rm ./index.m3u8 && rm ./0_info.js && rm -rf m3u8`));
         return
     }
-   
+
     /**测试
         fs.writeFile(pathLib.join(cwdPath, "m3u8", "1.txt"), "hello world", (err) => {
             if (err) {
@@ -45,7 +45,8 @@ let downFile = () => {
 }
 
 // downFile();
-console.log(videoUrlList, videoUrlList.length);
+console.log(videoUrlList);
+console.log(videoUrlList.length);
 
 module.exports = {
     downFile
